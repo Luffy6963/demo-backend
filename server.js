@@ -23,8 +23,9 @@ app.get('/', (req, res) => {
   res.send('Welcome, your app is working well');
 });
 
-const PORT = process.env.PORT || 4000;
+// const PORT = process.env.PORT || 4000;
 
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server started on port ${PORT}`);
+// });
+export default app;
