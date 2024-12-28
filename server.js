@@ -10,22 +10,21 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 import dotenv from 'dotenv';
+import app from './app.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-dotenv.config({ path: path.join(__dirname, '..', '.env') });
+// Load environment variables
+dotenv.config({ path: path.join(__dirname, '.env') });
 
-import app from './app.js';
-
-// Add a new route for the Hello World response
-app.get('/', (req, res) => {
-  res.send('Welcome, your app is working well');
-});
-
-// const PORT = process.env.PORT || 4000;
-
-// app.listen(PORT, () => {
-//   console.log(`Server started on port ${PORT}`);
-// });
-export default app;
+// Export a serverless function handler
+export default async (req, res) => {
+  try {
+    console.log('Incoming Request:', req.method, req.url);
+    app(req, res); // Pass the request and response to the Express app
+  } catch (error) {
+    console.error('Error in serverless function:', error);
+    res.status(500).send('Internal Server Error');
+  }
+};
