@@ -1,4 +1,5 @@
-import { Delivery } from '../models/index.js';
+// import { Delivery } from '../models/index.js';
+import Delivery from "../models/Delivery.js";
 
 // Create a new Delivery Partner
 export async function createDelivery(req, res) {

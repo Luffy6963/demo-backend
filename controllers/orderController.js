@@ -1,6 +1,8 @@
 // server/controllers/orderController.js
-
-import { Order, Seller, Delivery } from '../models/index.js'; // Import models
+import Order from '../models/Order.js';
+import Delivery from '../models/Delivery.js';
+import Seller from '../models/Seller.js';
+// import { Order, Seller, Delivery } from '../models/index.js'; // Import models
 import razorpay from '../config/razorpay.js'; // Razorpay configuration
 import crypto from 'crypto'; // For signature verification
 import { body } from 'express-validator';
