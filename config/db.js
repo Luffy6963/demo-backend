@@ -10,13 +10,13 @@ import { Sequelize } from 'sequelize';
 
 // Hardcoded Database Configuration
 const sequelize = new Sequelize(
-  'postgres',      
-  'postgres',        
-  'test@6969',         
+  '',      
+  '',        
+  '',         
   {
-    // user: 'postgres',
-    // password: 'test@6969',
-    // database:' postgres',
+    // user: '',
+    // password: '',
+    // database:'',
     host: 'localhost', 
     port: 5432,         
     dialect: 'postgres',
