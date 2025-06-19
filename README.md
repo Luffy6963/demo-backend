@@ -144,14 +144,6 @@ Modify server.js to adjust order amount logic, add custom fields, or extend API 
 Update database schema in models/ (if applicable) to store additional payment metadata.
 Adjust frontend fetch URLs to match your website’s domain or hosting setup.
 
-Folder Structure
-
-├── server.js           # Main backend server file
-├── models/            # Database models (MongoDB/PostgreSQL schemas)
-├── routes/            # REST API route definitions
-├── .env.example       # Example environment file
-├── package.json       # Project dependencies
-└── README.md          # Project documentation
 
 Dependencies
 
